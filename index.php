@@ -61,5 +61,22 @@
         echo "Type de Contrat : ". $this->contrat. " \n";
         
     }
+    // Formulaire, récupère les données, affiche les données
+    private function getValue($key) {
+        if(isset($this->name[$key])) {
+            return $this->name[$key];
+        } else {
+           return null;
+        }
+    }
+    public function createInput($key) {
+        echo '<label for='. $key . '>'. $key .' : </label>';
+        echo '<input type="text" class="input" name="' . $key . '" value="'. $this->getValue($key).'"> ';
+         
+    }
+
+    public function createSubmit($text) {
+        echo '<button type="submit" class="button">'.$text.'</button>';
+    }
 
 }

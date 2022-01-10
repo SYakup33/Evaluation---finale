@@ -44,3 +44,18 @@ foreach ($resultat as $resultat){
     echo "<hr>";
 }
 ?>
+<?php
+    require('C:\xampp\htdocs\Evaluation_finale\index.php');
+    $form = new Form($_POST);
+?>
+<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+<input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Forgot Password</label>
+<form class="login-form"method="post" action="#">
+	<div class="sign-in-htm">
+	    <div class="group">
+			<?php
+				$form->createInput('Nom');
+			?>
+		</div>
+    </div>
+</form>    
